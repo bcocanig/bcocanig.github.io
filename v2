@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Scotty | Luxury Scottsdale Vacation Rental</title>
+    <meta name="description" content="Stylish Scottsdale vacation home with heated pool, 3 bedrooms, near Old Town. Perfect for spring training, groups & desert getaways.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .amenity-icon {
+            font-size: 2rem;
+            color: #c05621;
+        }
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c05621;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-amber-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-gradient-to-r from-amber-700 to-amber-900 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white flex items-center">
+                <i class="fas fa-sun mr-2"></i>
+                <span>Hot Scotty</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-white hover:text-amber-200 transition">Home</a>
+                <a href="#gallery" class="text-white hover:text-amber-200 transition">Gallery</a>
+                <a href="#amenities" class="text-white hover:text-amber-200 transition">Amenities</a>
+                <a href="#attractions" class="text-white hover:text-amber-200 transition">Nearby</a>
+                <a href="#contact" class="text-white hover:text-amber-200 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-amber-800 px-6 py-2">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="text-white hover:text-amber-200 transition">Home</a>
+                <a href="#gallery" class="text-white hover:text-amber-200 transition">Gallery</a>
+                <a href="#amenities" class="text-white hover:text-amber-200 transition">Amenities</a>
+                <a href="#attractions" class="text-white hover:text-amber-200 transition">Nearby</a>
+                <a href="#contact" class="text-white hover:text-amber-200 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="z-10 text-center px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow">Hot Scotty</h1>
+            <p class="text-xl md:text-2xl mb-8 text-shadow">A stylish desert escape in the heart of Scottsdale</p>
+            <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105">
+                Book Your Stay
+            </a>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <a href="#about" class="text-white animate-bounce">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gradient-to-b from-amber-100 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-800 mb-4">Your Scottsdale Sanctuary</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">
+                    Enjoy a stylish experience at this centrally-located Scottsdale home! Get your volleyball game on with a dip in the heated pool, then get ready in your spacious room for a night out at the best entertainment Arizona has to offer.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="text-5xl text-amber-600 mb-4"><i class="fas fa-home"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Spacious Layout</h3>
+                    <p>Newly remodeled two-story home with 3 bedrooms, 4 beds, and 2.5 baths - perfect for up to 8 guests.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="text-5xl text-amber-600 mb-4"><i class="fas fa-swimming-pool"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Backyard Oasis</h3>
+                    <p>Heated pool, volleyball court, fire pit, and putting green create the ultimate desert entertainment space.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <div class="text-5xl text-amber-600 mb-4"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Prime Location</h3>
+                    <p>Minutes from Old Town, Papago Park, spring training, and all the best of Scottsdale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Facts -->
+    <section class="py-12 bg-amber-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center text-center">
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="text-4xl font-bold">3</div>
+                    <div>Bedrooms</div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="text-4xl font-bold">4</div>
+                    <div>Beds</div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="text-4xl font-bold">2.5</div>
+                    <div>Baths</div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+                    <div class="text-4xl font-bold">8</div>
+                    <div>Guests</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-800 mb-4">Gallery</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Living Room -->
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1583845112201-9fb39c28cfe2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Spacious living room" class="w-full h-64 object-cover">
+                    <div class="px-6 py-4 bg-white">
+                        <h3 class="font-bold text-xl mb-2">Modern Living Room</h3>
+                        <p class="text-gray-700">Open concept with comfy seating and smart TV</p>
+                    </div>
+                </div>
+                
+                <!-- Kitchen -->
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Gourmet kitchen" class="w-full h-64 object-cover">
+                    <div class="px-6 py-4 bg-white">
+                        <h3 class="font-bold text-xl mb-2">Chef's Kitchen</h3>
+                        <p class="text-gray-700">Fully equipped with premium appliances</p>
+                    </div>
+                </div>
+                
+                <!-- Master Bedroom -->
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Master bedroom" class="w-full h-64 object-cover">
+                    <div class="px-6 py-4 bg-white">
+                        <h3 class="font-bold text-xl mb-2">Master Suite</h3>
+                        <p class="text-gray-700">King bed with luxury linens and ensuite bath</p>
+                    </div>
+                </div>
+                
+                <!-- Pool -->
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1551712743-e4c4235aea9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Heated pool" class="w-full h-64 object-cover">
+                    <div class="px-6 py-4 bg-white">
+                        <h3 class="font-bold text-xl mb-2">Heated Pool</h3>
+                        <p class="text-gray-700">Year-round swimming with mountain views</p>
+                    </div>
+                </div>
+                
+                <!-- Backyard -->
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1389&q=80" 
+                         alt="Backyard entertainment" class="w-full h-64 object-cover">
+                    <div class="px-6 py-4 bg-white">
+                        <h3 class="font-bold text-xl mb-2">Entertainment Paradise</h3>
+                        <p class="text-gray-700">Putting green, fire pit, and lounge areas</p>
+                    </div>
+                </div>
+                
+                <!-- Dining -->
+                <div class="gallery-item overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
+                         alt="Dining area" class="w-full h-64 object-cover">
+                    <div class="px-6 py-4 bg-white">
+                        <h3 class="font-bold text-xl mb-2">Indoor & Outdoor Dining</h3>
+                        <p class="text-gray-700">Seating for 8+ with mountain views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="py-16 bg-amber-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-800 mb-4">Amenities</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Indoor Amenities -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-amber-700 flex items-center">
+                        <i class="fas fa-couch mr-2"></i> Indoor Amenities
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>3 spacious bedrooms (1 King, 2 Queens, 2 Twins)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>2.5 modern bathrooms with luxury toiletries</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Fully equipped gourmet kitchen</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Smart TVs in living room and all bedrooms</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>High-speed WiFi (300+ Mbps)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Washer & dryer</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Central AC & heating</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Outdoor Amenities -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-amber-700 flex items-center">
+                        <i class="fas fa-umbrella-beach mr-2"></i> Outdoor Amenities
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Heated saltwater pool (year-round use)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Backyard sand volleyball court</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Gas fire pit with seating</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Putting green with clubs provided</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Outdoor dining for 8 with BBQ grill</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Mountain views</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Private, fully fenced yard</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Extras -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-amber-700 flex items-center">
+                        <i class="fas fa-star mr-2"></i> Special Extras
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Smart lock for keyless entry</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Pack 'n play available for families</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Beach towels & pool floats provided</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Welcome basket with local goodies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Dog-friendly (with prior approval)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Ring security camera at front door</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Garage parking for 2 cars + driveway</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Attractions -->
+    <section id="attractions" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-800 mb-4">Nearby Attractions</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+                <p class="max-w-2xl mx-auto mt-4">Everything you need is just minutes away from Hot Scotty!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Old Town -->
+                <div class="bg-amber-100 rounded-xl p-6 shadow hover:shadow-md transition">
+                    <div class="text-amber-700 text-4xl mb-3">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Old Town Scottsdale</h3>
+                    <p class="mb-3">5 min • Art galleries, nightlife, dining</p>
+                    <a href="#" class="text-amber-700 font-medium hover:underline">Explore →</a>
